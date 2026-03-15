@@ -1,0 +1,79 @@
+import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
+import padThaiImg from "@/assets/pad-thai.jpg";
+import greenCurryImg from "@/assets/green-curry.jpg";
+import somTumImg from "@/assets/som-tum.jpg";
+import mangoRiceImg from "@/assets/mango-sticky-rice.jpg";
+import heroDishImg from "@/assets/hero-dish.jpg";
+
+interface Dish {
+  nameKey: keyof ReturnType<typeof useLanguage>["t"];
+  descKey: keyof ReturnType<typeof useLanguage>["t"];
+  price: string;
+  image: string;
+}
+
+const dishes: Dish[] = [
+  { nameKey: "padThai", descKey: "padThaiDesc", price: "145,000 VND", image: padThaiImg },
+  { nameKey: "greenCurry", descKey: "greenCurryDesc", price: "165,000 VND", image: greenCurryImg },
+  { nameKey: "tomYum", descKey: "tomYumDesc", price: "175,000 VND", image: heroDishImg },
+  { nameKey: "somTum", descKey: "somTumDesc", price: "95,000 VND", image: somTumImg },
+  { nameKey: "mangoRice", descKey: "mangoRiceDesc", price: "85,000 VND", image: mangoRiceImg },
+];
+
+const BestSellers = () => {
+  const { t } = useLanguage();
+
+  return (
+    <section id="menu" className="py-24">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.2, 0.8, 0.2, 1] }}
+          className="text-center mb-16 space-y-3"
+        >
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">
+            {t.bestSellers}
+          </h2>
+          <p className="text-muted-foreground text-lg">{t.bestSellersSub}</p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {dishes.map((dish, i) => (
+            <motion.div
+              key={dish.nameKey}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: i * 0.1, ease: [0.2, 0.8, 0.2, 1] }}
+              whileHover={{ y: -4 }}
+              className="bg-card rounded-2xl p-4 shadow-layered hover:shadow-layered-hover transition-shadow cursor-pointer"
+            >
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src={dish.image}
+                  alt={t[dish.nameKey] as string}
+                  className="aspect-square object-cover w-full"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="font-serif text-xl font-semibold mt-4 text-foreground text-balance">
+                {t[dish.nameKey] as string}
+              </h3>
+              <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+                {t[dish.descKey] as string}
+              </p>
+              <span className="text-primary font-semibold tabular-nums mt-4 block text-lg">
+                {dish.price}
+              </span>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default BestSellers;

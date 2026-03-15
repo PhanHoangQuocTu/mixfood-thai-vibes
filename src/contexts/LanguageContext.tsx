@@ -1,0 +1,90 @@
+import { createContext, useContext, useState, ReactNode } from "react";
+
+type Language = "en" | "vi";
+
+const translations = {
+  en: {
+    home: "Home",
+    menu: "Menu",
+    reserveTable: "Reserve Table",
+    heroHeadline: "Authentic Thai Soul in the Heart of Da Nang",
+    heroSub: "From the streets of Bangkok to the shores of Da Nang. Experience authentic spices, fresh local seafood, and traditional Thai hospitality.",
+    viewMenu: "View Menu",
+    aboutTitle: "The Balance of Four",
+    aboutText: "At Mix Food, we honor the ancient Thai philosophy of balancing four essential flavors — Salt, Sweet, Spicy, and Sour. Every dish is a symphony of fresh herbs, aromatic spices, and locally sourced seafood, prepared by our chefs who trained in Bangkok's finest kitchens. Step into our warm, inviting space and let us transport you to Thailand.",
+    bestSellers: "Our Best Sellers",
+    bestSellersSub: "Taste the dishes our guests return for, again and again.",
+    reviews: "What Our Guests Say",
+    location: "Find Us",
+    address: "128 Nguyen Van Linh, Hai Chau District, Da Nang, Vietnam",
+    hours: "Opening Hours",
+    hoursValue: "11:00 AM – 10:00 PM Daily",
+    phone: "+84 236 3888 999",
+    copyright: "© 2026 Mix Food Da Nang. All rights reserved.",
+    padThai: "Classic Pad Thai",
+    padThaiDesc: "Rice noodles, fresh prawns, tamarind glaze, crushed peanuts.",
+    greenCurry: "Green Curry Chicken",
+    greenCurryDesc: "Coconut milk, Thai basil, bamboo shoots, kaffir lime.",
+    tomYum: "Tom Yum Goong",
+    tomYumDesc: "Spicy lemongrass broth, tiger prawns, galangal, chili.",
+    somTum: "Som Tum Salad",
+    somTumDesc: "Green papaya, dried shrimp, peanuts, chili-lime dressing.",
+    mangoRice: "Mango Sticky Rice",
+    mangoRiceDesc: "Sweet coconut sticky rice, fresh mango, coconut cream.",
+    heroTomYum: "Tom Yum Goong",
+    heroTomYumDesc: "Our signature spicy & sour soup with tiger prawns.",
+  },
+  vi: {
+    home: "Trang Chủ",
+    menu: "Thực Đơn",
+    reserveTable: "Đặt Bàn",
+    heroHeadline: "Tinh Hoa Ẩm Thực Thái Giữa Lòng Đà Nẵng",
+    heroSub: "Từ đường phố Bangkok đến bờ biển Đà Nẵng. Trải nghiệm gia vị đích thực, hải sản tươi sống và lòng hiếu khách truyền thống Thái Lan.",
+    viewMenu: "Xem Thực Đơn",
+    aboutTitle: "Sự Cân Bằng Bốn Vị",
+    aboutText: "Tại Mix Food, chúng tôi tôn vinh triết lý ẩm thực Thái cổ xưa về sự cân bằng bốn hương vị cơ bản — Mặn, Ngọt, Cay và Chua. Mỗi món ăn là một bản giao hưởng của thảo mộc tươi, gia vị thơm lừng và hải sản địa phương, được chế biến bởi các đầu bếp đào tạo tại những nhà hàng danh tiếng nhất Bangkok.",
+    bestSellers: "Món Bán Chạy Nhất",
+    bestSellersSub: "Thưởng thức những món ăn mà khách hàng luôn quay lại.",
+    reviews: "Khách Hàng Nói Gì",
+    location: "Tìm Chúng Tôi",
+    address: "128 Nguyễn Văn Linh, Quận Hải Châu, Đà Nẵng, Việt Nam",
+    hours: "Giờ Mở Cửa",
+    hoursValue: "11:00 SA – 10:00 CH Hàng ngày",
+    phone: "+84 236 3888 999",
+    copyright: "© 2026 Mix Food Đà Nẵng. Bảo lưu mọi quyền.",
+    padThai: "Pad Thai Truyền Thống",
+    padThaiDesc: "Bún xào, tôm tươi, sốt me, đậu phộng rang.",
+    greenCurry: "Cà Ri Xanh Gà",
+    greenCurryDesc: "Nước cốt dừa, húng quế Thái, măng, lá chanh kaffir.",
+    tomYum: "Tom Yum Goong",
+    tomYumDesc: "Canh chua cay sả, tôm sú, riềng, ớt.",
+    somTum: "Gỏi Som Tum",
+    somTumDesc: "Đu đủ xanh, tôm khô, đậu phộng, nước trộn chua cay.",
+    mangoRice: "Xôi Xoài",
+    mangoRiceDesc: "Xôi dừa ngọt, xoài tươi, kem dừa.",
+    heroTomYum: "Tom Yum Goong",
+    heroTomYumDesc: "Canh chua cay đặc trưng với tôm sú.",
+  },
+};
+
+const LanguageContext = createContext<{
+  lang: Language;
+  setLang: (l: Language) => void;
+  t: (typeof translations)["en"];
+}>({
+  lang: "en",
+  setLang: () => {},
+  t: translations.en,
+});
+
+export const useLanguage = () => useContext(LanguageContext);
+
+export const LanguageProvider = ({ children }: { children: ReactNode }) => {
+  const [lang, setLang] = useState<Language>("en");
+  const t = translations[lang];
+  return (
+    <LanguageContext.Provider value={{ lang, setLang, t }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
