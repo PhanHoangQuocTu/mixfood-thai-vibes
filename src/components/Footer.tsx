@@ -21,7 +21,7 @@ const Footer = () => {
             <nav className="flex flex-col gap-2">
               {[
                 { label: t.home, href: "/" },
-                { label: t.menu, href: "/#menu" },
+                { label: t.menu, href: "/menu" },
                 { label: t.reserveTable, href: "/reserve" },
               ].map((link) => (
                 <a

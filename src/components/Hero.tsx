@@ -30,7 +30,7 @@ const Hero = () => {
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <a
-                href="#menu"
+                href="/menu"
                 className="rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:-translate-y-0.5 transition-all active:scale-95 shadow-layered"
               >
                 {t.viewMenu}
