@@ -143,8 +143,27 @@ const LanguageContext = createContext<{
 
 export const useLanguage = () => useContext(LanguageContext);
 
+const getCookie = (name: string): string | null => {
+  const match = document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`));
+  return match ? match[2] : null;
+};
+
+const setCookie = (name: string, value: string, days = 365) => {
+  const expires = new Date(Date.now() + days * 864e5).toUTCString();
+  document.cookie = `${name}=${value};expires=${expires};path=/;SameSite=Lax`;
+};
+
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [lang, setLang] = useState<Language>("en");
+  const [lang, setLangState] = useState<Language>(() => {
+    const saved = getCookie("lang");
+    return saved === "vi" ? "vi" : "en";
+  });
+
+  const setLang = (l: Language) => {
+    setLangState(l);
+    setCookie("lang", l);
+  };
+
   const t = translations[lang];
   return (
     <LanguageContext.Provider value={{ lang, setLang, t }}>
