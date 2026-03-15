@@ -126,7 +126,7 @@ const Header = () => {
             </div>
           </div>
           <a
-            href="#reserve"
+            href="/reserve"
             onClick={() => setMobileOpen(false)}
             className="block rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground text-center"
           >
