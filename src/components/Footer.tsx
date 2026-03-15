@@ -14,6 +14,15 @@ const Footer = () => {
             <p className="text-sm text-background/60 leading-relaxed max-w-[40ch]">
               Authentic Thai cuisine in the heart of Da Nang. Experience the balance of flavors.
             </p>
+            <a
+              href="https://www.facebook.com/mixfoodamthucthai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-background/50 hover:text-primary transition-colors"
+            >
+              <Facebook size={20} />
+              <span className="text-sm">Facebook</span>
+            </a>
           </div>
 
           {/* Links */}
