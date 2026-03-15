@@ -22,7 +22,7 @@ const Footer = () => {
               {[
                 { label: t.home, href: "#home" },
                 { label: t.menu, href: "#menu" },
-                { label: t.reserveTable, href: "#reserve" },
+                { label: t.reserveTable, href: "/reserve" },
               ].map((link) => (
                 <a
                   key={link.href}
