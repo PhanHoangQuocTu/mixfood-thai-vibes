@@ -36,7 +36,7 @@ const Hero = () => {
                 {t.viewMenu}
               </a>
               <a
-                href="#reserve"
+                href="/reserve"
                 className="rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground hover:-translate-y-0.5 transition-all active:scale-95"
               >
                 {t.reserveTable}
