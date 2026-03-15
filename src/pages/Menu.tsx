@@ -297,7 +297,7 @@ const MenuContent = () => {
                         </span>
                       )}
                       {item.tags.includes("veggie") && (
-                        <span className="flex items-center gap-1 bg-emerald-600/90 backdrop-blur-sm text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+                        <span className="flex items-center gap-1 bg-primary/90 backdrop-blur-sm text-primary-foreground text-xs font-semibold px-2.5 py-1 rounded-full">
                           <Leaf size={12} />
                           {lang === "vi" ? "Chay" : "Veggie"}
                         </span>
