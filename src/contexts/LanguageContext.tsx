@@ -6,17 +6,20 @@ const translations = {
   en: {
     home: "Home",
     menu: "Menu",
-    reserveTable: "Reserve Table",
+    reserveTable: "Reserve Table (Comming Soon)",
     heroHeadline: "Authentic Thai Soul in the Heart of Da Nang",
-    heroSub: "From the streets of Bangkok to the shores of Da Nang. Experience authentic spices, fresh local seafood, and traditional Thai hospitality.",
+    heroSub:
+      "From the streets of Bangkok to the shores of Da Nang. Experience authentic spices, fresh local seafood, and traditional Thai hospitality.",
     viewMenu: "View Menu",
     aboutTitle: "The Balance of Four",
-    aboutText: "At Mix Food, we honor the ancient Thai philosophy of balancing four essential flavors — Salt, Sweet, Spicy, and Sour. Every dish is a symphony of fresh herbs, aromatic spices, and locally sourced seafood, prepared by our chefs who trained in Bangkok's finest kitchens. Step into our warm, inviting space and let us transport you to Thailand.",
+    aboutText:
+      "At Mix Food, we honor the ancient Thai philosophy of balancing four essential flavors — Salt, Sweet, Spicy, and Sour. Every dish is a symphony of fresh herbs, aromatic spices, and locally sourced seafood, prepared by our chefs who trained in Bangkok's finest kitchens. Step into our warm, inviting space and let us transport you to Thailand.",
     bestSellers: "Our Best Sellers",
     bestSellersSub: "Taste the dishes our guests return for, again and again.",
     reviews: "What Our Guests Say",
     location: "Find Us",
-    address: "K38/37 Nguyen Duy Hieu (K49 Nguyen Van Thoai), Son Tra District, Da Nang City, Vietnam",
+    address:
+      "K38/37 Nguyen Duy Hieu (K49 Nguyen Van Thoai), Son Tra District, Da Nang City, Vietnam",
     hours: "Opening Hours",
     hoursValue: "9:00 AM – 10:00 PM Daily",
     phone: "(+84) 905 473 728",
@@ -35,7 +38,8 @@ const translations = {
     heroTomYumDesc: "Our signature spicy & sour soup with tiger prawns.",
     // Reservation page
     reservePageTitle: "Reserve Your Table",
-    reservePageSub: "Book your dining experience at Mix Food. We look forward to welcoming you.",
+    reservePageSub:
+      "Book your dining experience at Mix Food. We look forward to welcoming you.",
     fullName: "Full Name",
     fullNamePlaceholder: "Enter your full name",
     phoneNumber: "Phone Number",
@@ -54,8 +58,10 @@ const translations = {
     openingHoursValue: "Monday – Sunday: 9:00 – 22:00",
     policy: "Restaurant Policy",
     policy1: "Reservations must be made at least 2 hours in advance",
-    policy2: "Tables are held for a maximum of 15 minutes after reservation time",
-    policy3: "Groups of 8 or more guests should contact the restaurant directly",
+    policy2:
+      "Tables are held for a maximum of 15 minutes after reservation time",
+    policy3:
+      "Groups of 8 or more guests should contact the restaurant directly",
     policy4: "Cancellations must be made at least 1 hour in advance",
     contact: "Contact",
     contactPhone: "(+84) 905 473 728",
@@ -71,15 +77,18 @@ const translations = {
     menu: "Thực Đơn",
     reserveTable: "Đặt Bàn",
     heroHeadline: "Tinh Hoa Ẩm Thực Thái Giữa Lòng Đà Nẵng",
-    heroSub: "Từ đường phố Bangkok đến bờ biển Đà Nẵng. Trải nghiệm gia vị đích thực, hải sản tươi sống và lòng hiếu khách truyền thống Thái Lan.",
+    heroSub:
+      "Từ đường phố Bangkok đến bờ biển Đà Nẵng. Trải nghiệm gia vị đích thực, hải sản tươi sống và lòng hiếu khách truyền thống Thái Lan.",
     viewMenu: "Xem Thực Đơn",
     aboutTitle: "Sự Cân Bằng Bốn Vị",
-    aboutText: "Tại Mix Food, chúng tôi tôn vinh triết lý ẩm thực Thái cổ xưa về sự cân bằng bốn hương vị cơ bản — Mặn, Ngọt, Cay và Chua. Mỗi món ăn là một bản giao hưởng của thảo mộc tươi, gia vị thơm lừng và hải sản địa phương, được chế biến bởi các đầu bếp đào tạo tại những nhà hàng danh tiếng nhất Bangkok.",
+    aboutText:
+      "Tại Mix Food, chúng tôi tôn vinh triết lý ẩm thực Thái cổ xưa về sự cân bằng bốn hương vị cơ bản — Mặn, Ngọt, Cay và Chua. Mỗi món ăn là một bản giao hưởng của thảo mộc tươi, gia vị thơm lừng và hải sản địa phương, được chế biến bởi các đầu bếp đào tạo tại những nhà hàng danh tiếng nhất Bangkok.",
     bestSellers: "Món Bán Chạy Nhất",
     bestSellersSub: "Thưởng thức những món ăn mà khách hàng luôn quay lại.",
     reviews: "Khách Hàng Nói Gì",
     location: "Tìm Chúng Tôi",
-    address: "K38/37 Nguyen Duy Hieu (K49 Nguyen Van Thoai), Quận Sơn Trà, Thành phố Đà Nẵng, Việt Nam",
+    address:
+      "K38/37 Nguyen Duy Hieu (K49 Nguyen Van Thoai), Quận Sơn Trà, Thành phố Đà Nẵng, Việt Nam",
     hours: "Giờ Mở Cửa",
     hoursValue: "9:00 SA – 10:00 CH Hàng ngày",
     phone: "(+84) 905 473 728",
@@ -98,7 +107,8 @@ const translations = {
     heroTomYumDesc: "Canh chua cay đặc trưng với tôm sú.",
     // Reservation page
     reservePageTitle: "Đặt Bàn",
-    reservePageSub: "Đặt trải nghiệm ẩm thực tại Mix Food. Chúng tôi mong được chào đón bạn.",
+    reservePageSub:
+      "Đặt trải nghiệm ẩm thực tại Mix Food. Chúng tôi mong được chào đón bạn.",
     fullName: "Họ và Tên",
     fullNamePlaceholder: "Nhập họ và tên",
     phoneNumber: "Số Điện Thoại",
