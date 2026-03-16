@@ -21,7 +21,7 @@ const translations = {
     address:
       "K38/37 Nguyen Duy Hieu (K49 Nguyen Van Thoai), Son Tra District, Da Nang City, Vietnam",
     hours: "Opening Hours",
-    hoursValue: "9:00 AM – 10:00 PM Daily",
+    hoursValue: "9:00  – 21:50 Daily",
     phone: "(+84) 905 473 728",
     copyright: "© 2026 Mix Food Da Nang. All rights reserved.",
     padThai: "Classic Pad Thai",
@@ -55,7 +55,7 @@ const translations = {
     specialRequestsPlaceholder: "Any dietary requirements or special occasion?",
     reserveButton: "Reserve Table",
     openingHours: "Opening Hours",
-    openingHoursValue: "Monday – Sunday: 10:00 – 22:00",
+    openingHoursValue: "Monday – Sunday: 10:00 – 21:50",
     policy: "Restaurant Policy",
     policy1: "Reservations must be made at least 2 hours in advance",
     policy2:
@@ -90,7 +90,7 @@ const translations = {
     address:
       "K38/37 Nguyen Duy Hieu (K49 Nguyen Van Thoai), Quận Sơn Trà, Thành phố Đà Nẵng, Việt Nam",
     hours: "Giờ Mở Cửa",
-    hoursValue: "9:00 SA – 21:50 CH Hàng ngày",
+    hoursValue: "9:00 – 21:50 Hàng ngày",
     phone: "(+84) 905 473 728",
     copyright: "© 2026 Mix Food Đà Nẵng. Bảo lưu mọi quyền.",
     padThai: "Pad Thai Truyền Thống",
